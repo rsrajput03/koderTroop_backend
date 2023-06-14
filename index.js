@@ -89,7 +89,7 @@ app.patch("/:todoId", async (req, res) => {
 
 
 
-app.listen(process.env.PORT,async ()=>{
+app.listen(8000,async ()=>{
     try {
       await connection 
       console.log("Connected to MongoDB")
@@ -97,5 +97,5 @@ app.listen(process.env.PORT,async ()=>{
         console.log("Not Connected to MongoDB")
         console.log(error)
     }
-    console.log(`Server is running on port ${process.env.PORT}`)
+    console.log(`Server is running on port 8000`)
 })
