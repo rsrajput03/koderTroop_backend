@@ -7,6 +7,30 @@ const todoSchema = mongoose.Schema(
   }
 );
 
-const TodoModel = mongoose.model("todo", todoSchema);
+const progressSchema = mongoose.Schema(
+  { _id: String, title: String, description: String, complete: Boolean },
+  {
+    versionKey: false,
+  }
+);
 
-module.exports = { TodoModel };
+const qaSchema = mongoose.Schema(
+  { _id: String, title: String, description: String, complete: Boolean },
+  {
+    versionKey: false,
+  }
+);
+
+const doneSchema = mongoose.Schema(
+  { _id: String, title: String, description: String, complete: Boolean },
+  {
+    versionKey: false,
+  }
+);
+
+const TodoModel = mongoose.model("todo", todoSchema);
+const ProgressModel = mongoose.model("progress", progressSchema);
+const QaModel = mongoose.model("qa", qaSchema);
+const DoneModel = mongoose.model("done", doneSchema);
+
+module.exports = { TodoModel,ProgressModel,QaModel,DoneModel};
