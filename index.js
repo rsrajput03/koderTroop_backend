@@ -13,7 +13,9 @@ app.use(express.json())
 app.use("/todos",todoRouter)
 
 
-
+app.get("/",(req,res)=>{
+  res.send("api work")
+})
 
 
 
